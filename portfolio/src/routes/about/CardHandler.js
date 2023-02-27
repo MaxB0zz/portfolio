@@ -8,6 +8,7 @@ export class CardHandler {
     }
 
     render(cardIndex, nbCards) {
-        return this.cards.slice(cardIndex, cardIndex + nbCards);
+        let maxIndex = Math.min(cardIndex, this.cards.length - nbCards);
+        return this.cards.slice(maxIndex, maxIndex + nbCards);
     }
 }

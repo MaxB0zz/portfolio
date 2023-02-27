@@ -12,8 +12,7 @@
     $: nbCards = innerWidth > 1050 ? 3 : innerWidth > 750 ? 2 : 1;
     $: nbClicks = 0;
     let cardHandler = new CardHandler();
-    $: index = (nbCards * nbClicks) % Math.ceil(cardHandler.cards.length / nbCards);
-    $: cards = cardHandler.render(index, nbCards);
+    $: cards = cardHandler.render(nbClicks * nbCards, nbCards);
 </script>
 
 <svelte:window bind:innerWidth={innerWidth}/>
