@@ -1,0 +1,38 @@
+[
+  {
+    "cardType": "Art",
+    "imgUrl": "src/routes/about/imgsrc/aesth.jpg",
+    "title": "Japanese Living",
+    "description": "a simple 2.5D blender realisation of a japanese type of building"
+  },
+  {
+    "cardType": "Tech",
+    "imgUrl": "src/routes/about/imgsrc/emoro.png",
+    "title": "Emoro IDE",
+    "description": "my very first React and Fullstack project: EmoroIDE, the objective was to make an IDE on a web application it had to include main features like syntax coloration but also some other unusual features like a built-in music player."
+  },
+  {
+    "cardType": "Art",
+    "imgUrl": "src/routes/about/imgsrc/sunset.png",
+    "title": "Sweet Sunset",
+    "description": "A digital drawing i made of a sunset with a specific color palette"
+  },
+  {
+    "cardType": "Art",
+    "imgUrl": "src/routes/about/imgsrc/aesth.jpg",
+    "title": "Japanese Living",
+    "description": "a simple 2.5D blender realisation of a japanese type of building"
+  },
+  {
+    "cardType": "Art",
+    "imgUrl": "src/routes/about/imgsrc/sunset.png",
+    "title": "Sweet Sunset",
+    "description": "A digital drawing i made of a sunset with a specific color palette"
+  },
+  {
+    "cardType": "Tech",
+    "imgUrl": "src/routes/about/imgsrc/emoro.png",
+    "title": "Emoro IDE",
+    "description": "my very first React and Fullstack project: EmoroIDE, the objective was to make an IDE on a web application it had to include main features like syntax coloration but also some other unusual features like a built-in music player."
+  }
+]
