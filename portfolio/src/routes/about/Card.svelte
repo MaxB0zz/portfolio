@@ -6,8 +6,8 @@
         title: "Undefined",
         description: "Undefined",
     };
-    let dotColor = cardData.cardType === "Art" ? "1" : cardData.cardType === "Tech" ? "2" : "3";
-    let color = "--color-theme-" + dotColor;
+    $: dotColor = cardData.cardType === "Art" ? "1" : cardData.cardType === "Tech" ? "2" : "3";
+    $: color = "--color-theme-" + dotColor;
 </script>
 
 <div class="cards">
@@ -76,7 +76,8 @@
         border-radius: 5px;
         width: 5.8em;
         height: 3.1em;
-        gap: 0.1em
+        gap: 0.1em;
+
     }
     .cardFooter {
         display: flex;
@@ -154,10 +155,11 @@
         overflow: hidden;
         background-color: var(--color-bg-1);
         filter: brightness(1.15);
+        transition: 0.2s;
     }
     .card:hover {
         filter: brightness(1.50);
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     .cardname {
         display: flex;
