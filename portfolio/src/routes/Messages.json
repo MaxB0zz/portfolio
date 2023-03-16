@@ -1,0 +1,15 @@
+[
+  {
+    "data" : "hey!"
+  },
+  {
+    "data": "Cool, this is a test! lol"
+  },
+  {
+    "data": "wow! this is another test!!! This should be a very long test tho, wonder if it will still work",
+    "redirect" : "test"
+  },
+  {
+    "data": "sniff"
+  }
+]

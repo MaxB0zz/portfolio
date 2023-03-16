@@ -4,6 +4,12 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	kit: {
 		adapter: adapter()
+	},
+	router: {
+		// ...
+		link: {
+			noTransition: true
+		}
 	}
 };
 

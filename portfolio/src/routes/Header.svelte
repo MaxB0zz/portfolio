@@ -11,8 +11,8 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">Projects</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Contact me</a>
+			<li aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined}>
+				<a href="/contact">Contact me</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -59,8 +59,14 @@
 
 	svg {
 		width: 2em;
-		height: 3em;
+		height: 100%;
 		display: block;
+	}
+
+	@media (max-width: 400px) {
+		svg {
+			min-width: 2em;
+		}
 	}
 
 	path {
