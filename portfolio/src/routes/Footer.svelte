@@ -7,19 +7,33 @@
 
 <footer>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={discord} alt="Discord" />
-		</a>
-		<a href="https://www.linkedin.com/in/maximilien-bouyjou-05b686201/">
-			<img src={linkedin} alt="linkedin" />
-		</a>
-		<a href="https://github.com/MaxB0zz?tab=repositories">
-			<img src={github} class="git" alt="GitHub" />
-		</a>
+		<div class="logos">
+			<a href="https://kit.svelte.dev">
+				<img src={discord} alt="Discord" />
+			</a>
+			<a href="https://www.linkedin.com/in/maximilien-bouyjou-05b686201/">
+				<img src={linkedin} alt="linkedin" />
+			</a>
+			<a href="https://github.com/MaxB0zz?tab=repositories">
+				<img src={github} class="git" alt="GitHub" />
+			</a>
+		</div>
 	</div>
 </footer>
 
 <style>
+
+	.logos {
+
+		width: 100%;
+		height: 100%;
+		display: flex;
+		gap: 1em;
+
+		justify-content: center;
+		align-items: center;
+	}
+
 	.corner img {
 		width: 2em;
 		height: 2em;
@@ -27,12 +41,19 @@
 		fill: white;
 	}
 	.corner {
-		width: 100%;
-		height: 100%;
 		display: flex;
-		gap: 1em;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	p {
+		margin: 1em;
+		font-weight: 700;
+		font-size: 1.1rem;
+		letter-spacing: 0.1em;
+		text-decoration: none;
+		color: white;
 	}
 
 	footer {

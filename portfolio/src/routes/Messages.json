@@ -1,15 +1,18 @@
 [
   {
-    "data" : "hey!"
+    "data" : "Hey! I'm Max, and I am thrilled to share my passion for full-stack development through my portfolio. I am a computer science student at EPITA, and my interest in technology led me to explore multiple areas of study, including quantum computing."
   },
   {
-    "data": "Cool, this is a test! lol"
+    "data": "As a self-driven individual, I am always looking for ways to challenge myself, and that's why I'm pursuing quantum studies alongside my computer science degree. Quantum computing has been a fascinating field for me, and I enjoy learning about the underlying principles that allow for the creation of faster and more efficient algorithms."
   },
   {
-    "data": "wow! this is another test!!! This should be a very long test tho, wonder if it will still work",
+    "data": "But, I am not just interested in quantum computing. I am also a creative person who loves to spend their free time working on various projects. Whether it's designing new user interfaces, building interactive websites, or creating multimedia content, I always find joy in exploring new ways to express my creativity.",
     "redirect" : "test"
   },
   {
-    "data": "sniff"
+    "data": "With regards to my technical skills, I have experience with several programming languages, including HTML, CSS, JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and frameworks that can help me build better, more robust applications."
+  },
+  {
+    "data": "My portfolio showcases some of my best work in full-stack development, including web applications, custom APIs, and interactive interfaces. I believe that my experience in quantum studies and my creative background have given me a unique perspective that I can bring to the table."
   }
 ]

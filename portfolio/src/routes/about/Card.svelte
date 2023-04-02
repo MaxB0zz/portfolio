@@ -18,7 +18,7 @@
 	<div class="card">
 		<div class="cardname">
 			<div class="txt">
-				<div class="dot" style="background-color: var({color});" />
+				<div class="dot" style="background-color: var({color});"/>
 				<p>{cardData.cardType}</p>
 			</div>
 			<svg viewBox="0 0 2 3" aria-hidden="true">

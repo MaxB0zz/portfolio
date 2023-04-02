@@ -1,12 +1,13 @@
 <script>
     import openIcon from '$lib/icons/open.svg';
+    import {slide} from "svelte/transition";
     export let Message = {
         data: "Uh i didnt load",
         redirect: null
     }
 </script>
 
-<div class="ChatBubble">
+<div in:slide class="ChatBubble">
     <div class="MsgContainer">
         <div class="leftBorder"/>
         <div class="Message">
@@ -22,6 +23,17 @@
 
 
 <style>
+
+    @media (max-width: 500px) {
+        .ChatBubble {
+            min-width: 3em;
+            max-width: 16em;
+        }
+        .MsgContainer {
+            min-width: 3em;
+            max-width: 16em;
+        }
+    }
     img {
         height: 1.1em;
         width: 1.1em;
@@ -36,7 +48,7 @@
         border-top-right-radius: 0.8em;
         overflow: hidden;
         min-width: 3em;
-        max-width: 16em;
+        max-width: 32em;
         transition: 0.3s;
     }
 
@@ -46,7 +58,7 @@
         align-items: center;
         min-height: 1.5em;
         min-width: 3em;
-        max-width: 16em;
+        max-width: 32em;
     }
 
     .ChatBubble:hover {

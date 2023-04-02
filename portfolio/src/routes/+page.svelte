@@ -2,6 +2,24 @@
 	import ChatBubble from "./ChatBubble.svelte";
 	import Messages from "./Messages.json";
 	import UserIcon from "$lib/images/me.png"
+
+	async function sleep(ms) {
+		return new Promise((resolve) => setTimeout(resolve, ms));
+	}
+	let AllMessages = [];
+	let isWritting = true;
+
+
+	let fillMessages = async () => {
+		for (let i = 0; i < Messages.length; i++) {
+			isWritting = true;
+			await sleep(Messages[i].data.length * 10);
+			isWritting = false;
+			AllMessages = [...AllMessages, Messages[i]];
+			await sleep(Math.random() * 500 + 500);
+		}
+	}
+	$: fillMessages();
 </script>
 
 <svelte:head>
@@ -18,20 +36,33 @@
 				</div>
 			</div>
 			<div>
-				{#each Messages as m}
+				{#each AllMessages as m}
 					<ChatBubble Message={m}/>
 				{/each}
-				<div class="bubble">
-					<div id="ball1" class="writingBubble"/>
-					<div id="ball2" class="writingBubble"/>
-					<div id="ball3" class="writingBubble"/>
-				</div>
+				{#if isWritting}
+					<div class="bubble">
+						<div class="writingBubble"/>
+						<div id="ball2" class="writingBubble"/>
+						<div id="ball3" class="writingBubble"/>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
 </section>
 
 <style>
+	@keyframes smooth-blink {
+		from {
+			filter: opacity(0);
+			transform: scale(0.8);
+			}
+		to {filter: opacity(1);
+			transform: scale(1);
+		}
+
+	}
+
 	.bubble {
 		height: 2.5em;
 		background-color: var(--color-bg-1);
@@ -39,19 +70,28 @@
 		overflow: hidden;
 		border-radius: 0.7em;
 		display: flex;
-		justify-content: space-between;
-		gap: 0;
+		justify-content: center;
 		align-items: center;
 		width: 5em;
 		margin-top: 1em;
 	}
 
 	.writingBubble {
-		height: 0.8em;
-		width: 0.8em;
+		min-height: 0.8em;
+		min-width: 0.8em;
+		margin-right: 0.5em;
+		margin-left: 0.5em;
 		border-radius: 50%;
 		background: var(--grad-bg);
 		background: var(--grad-bg-lin);
+		animation: smooth-blink alternate 1s;
+		animation-iteration-count: infinite;
+	}
+	#ball2 {
+		animation-delay: 0.3s;
+	}
+	#ball3 {
+		animation-delay: 0.6s;
 	}
 
 	.icons {
@@ -67,7 +107,7 @@
 	.border {
 		background: var(--grad-bg);
 		background: var(--grad-bg-lin);
-		width: 100%;
+		width: 2.5em;
 		height: 2.5em;
 		display: flex;
 		justify-content: center;
